@@ -29,12 +29,10 @@ class RegisterSerializer(serializers.ModelSerializer):
     
     # or
 
-
-    # def create(self,validated_data):
-    #     validated_data.pop('cnfrm_password')
-    #     user=User.objects.create_user(**validated_data)
-    #     return user
-
+   # def create(self, validated_data):
+   #      validated_data.pop('cnfrm_password')
+   #      password = validated_data.pop('password')
+   #      return User.objects.create_user(password=password, **validated_data)
 
 
 class LoginSerializer(serializers.Serializer):
