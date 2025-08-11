@@ -55,7 +55,12 @@ MIDDLEWARE = [
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",  # Angular frontend
+    "http://localhost:4200",
+    "http://127.0.0.1:4200",
+    "http://localhost:4300",
+    "http://127.0.0.1:4300",
+    "http://localhost:54416",        # Add your current frontend port
+    "http://127.0.0.1:54416"  # Angular frontend
 ]
 
 # Optional: If you're using cookies (for login or sessions)
@@ -63,6 +68,11 @@ CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:4200",
+    "http://127.0.0.1:4200",
+    "http://localhost:4300",
+    "http://127.0.0.1:4300",
+    "http://localhost:54416",        # Add your current frontend port
+    "http://127.0.0.1:54416"
 ]
 
 
@@ -133,6 +143,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
